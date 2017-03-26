@@ -178,14 +178,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Mac下使用hexo构建自己的博客"><a href="#Mac下使用hexo构建自己的博客" class="headerlink" title="Mac下使用hexo构建自己的博客"></a>Mac下使用hexo构建自己的博客</h1><p>##关键词：</p>
+        <h2 id="预装小工具"><a href="#预装小工具" class="headerlink" title="预装小工具"></a>预装小工具</h2><p>为什么要装一些小工具呢？因为在你的Mac下你的终端可能刚打开的时候是这个样子的：<br><img src="http://ondprveay.bkt.clouddn.com/original_terminal.png" alt="oringal termianl"></p>
+<p>这么小的字体是不太适合长时间的操作，所以我们可以在个性化设置里面调整窗口的大小和以及将背景更改透明度为:<br><img src="http://ondprveay.bkt.clouddn.com/my_terminal.png" alt="oringal termianl"></p>
+<h2 id="工具简介"><a href="#工具简介" class="headerlink" title="工具简介"></a>工具简介</h2><blockquote>
 <ul>
-<li>oh my Zsh </li>
-<li>npm</li>
-<li>git</li>
-<li>Node.js</li>
-<li>homebrew</li>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh">oh my zsh</a> : 主要用来美化中断，使用一些不错的terminal主题</li>
+<li><a href="https://brew.sh">Homebrew</a>  ：终端下自动的来安装一些软件和包</li>
+<li>npm         ：包管理</li>
+<li>git         : 版本控制（如果电脑有Xcode，则一般是已经安装了的）</li>
+<li>node.js   : 主要用来生成静态文件</li>
 </ul>
+</blockquote>
+<p>npm,git和node.js均可以通过homebrew的命令行进行安装。</p>
+<pre><code>$ brew install npm
+</code></pre><h2 id=""><a href="#" class="headerlink" title=""></a>
         
           <a class="article-more-a" href="/2017/03/24/Mac下使用hexo建立自己的博客/#more">more >></a>
         
@@ -196,6 +202,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Mac Hexo yilia</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -371,6 +388,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Mac Hexo yilia</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">First  Hello world</a>
