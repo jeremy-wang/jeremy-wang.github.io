@@ -10,32 +10,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Super tiny compiler 概要标签（空格分隔）parser compiler lisp c
 
-##编译器什么是编译器？
+编译器什么是编译器？
 
- *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。
-
-super tiny compiler这个小型的编译器主要实现了从">
+ *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Compiler">
 <meta property="og:url" content="http://jeremywang.cn/2017/03/28/Compiler/index.html">
 <meta property="og:site_name" content="wang">
 <meta property="og:description" content="Super tiny compiler 概要标签（空格分隔）parser compiler lisp c
 
-##编译器什么是编译器？
+编译器什么是编译器？
 
- *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。
-
-super tiny compiler这个小型的编译器主要实现了从">
-<meta property="og:updated_time" content="2017-03-28T15:05:17.000Z">
+ *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。">
+<meta property="og:updated_time" content="2017-03-28T15:08:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compiler">
 <meta name="twitter:description" content="Super tiny compiler 概要标签（空格分隔）parser compiler lisp c
 
-##编译器什么是编译器？
+编译器什么是编译器？
 
- *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。
-
-super tiny compiler这个小型的编译器主要实现了从">
+ *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。">
   
     <link rel="alternative" href="/atom.xml" title="wang" type="application/atom+xml">
   
@@ -197,16 +191,16 @@ super tiny compiler这个小型的编译器主要实现了从">
       
         <h1 id="Super-tiny-compiler-概要"><a href="#Super-tiny-compiler-概要" class="headerlink" title="Super tiny compiler 概要"></a>Super tiny compiler 概要</h1><p>标签（空格分隔）parser compiler lisp c</p>
 <hr>
-<p>##编译器<br>什么是编译器？</p>
+<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><p>什么是编译器？</p>
 <blockquote>
 <p> *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="super-tiny-compiler"><a href="#super-tiny-compiler" class="headerlink" title="super tiny compiler"></a>super tiny compiler</h2><p>这个小型的编译器主要实现了从lisp的函数语法到c的函数的转变，而不是一般的操作系统中的编译器；将高级程序设计语言编译为机器语言。</p>
-<p>##构造编译器的程序的三个步骤</p>
-<blockquote>
+<h2 id="构造编译器的程序的三个步骤"><a href="#构造编译器的程序的三个步骤" class="headerlink" title="构造编译器的程序的三个步骤"></a>构造编译器的程序的三个步骤</h2><blockquote>
 <p>解析： parser<br>转换：transform<br>代码生成：code generation</p>
 </blockquote>
-<p>##解析：<br>分为词法分析和语法分析</p>
+<h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>分为词法分析和语法分析</p>
 <blockquote>
 <p><strong>词法分析</strong><br>接收源代码，然后将源程序分割成Token的词片段，整个过程是在词法分析器tokenizer／lexer里完成的。<br>Token实际上是一个由一些代码语句组成的数组，可以是程序设计语言中允许出现的各种元素的集合。</p>
 <p><strong>语法分析</strong><br>接收之前的词法分析生成的Token，使他们转换为一种抽象的表达，描述代码语句和每个片段的关系，这种表达方式称为中间表示（intermediate representation）或者抽象语法树（Abstract Syntax Tree）AST。</p>
