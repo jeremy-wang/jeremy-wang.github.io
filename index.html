@@ -178,34 +178,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Chomsky"><a href="#Chomsky" class="headerlink" title="Chomsky"></a>Chomsky</h2><p><img src="http://ondprveay.bkt.clouddn.com/Chomsky.jpg" alt="chomsky"></p>
-<blockquote>
-<p>一个人的语言知识是以某种方式体现在人脑这个有限的机体之中的，因此，语言知识就是一个由某种规则和原则构成的有限系统。但是一个会说话的人却能讲出并理解他从未听到过的句子以及和我们听到的不十分相似的句子。而且，这种能力是无限的。如果不受时间和记忆力的限制，那么一个人所获得的知识系统规定了特定形式、结构和意义的句子的数目也将是无限的。不难看到这种能力在正常的人类生活中得到自由的运用。我们在日常生活中所使用和理解的句子范围是极大的，无论就其实际情况而言还是为了理论描写上的需要，我们完全有理由认为人们使用和理解的句子范围都是无限的。”</p>
-</blockquote>
-<p>把句子分割为成份层次的思想最早出现于实验心理学的W.Wundt的《大众心理学》中，而从古典时期开始的传统欧洲语法则是研究如何确定具体的单词之间的关系，而不是研究确定单词所表示的成分之间的层次关系。</p>
-<p>在随后的自然语言处理中，形成了两种有代表性的形式模型，一是以<em>成份</em>为基础的形式模型（如“短语结构语法”），二是欧洲句法学者的以<em>词</em>为基础的语法或者依存语法。</p>
-<p>其中在以成分为基础的形式模型方面做的比较出色的是1928年出生于美国费城的Chomsky，他把形势语法理解为数目有限的<em>规则</em>的集合，这些规则可以生成语言中的合格句子，并排除不符合规则的句子。 </p>
-<p>形式语言是一种外延极为广泛的句子，它既可以指代自然语言，也可以指各种用符号构成的语言(计算机程序设计语言等)，Chomsky将自然语言和各种符号语言放在统一的平台上去研究，因此他的理论更加具有概括性。</p>
-<p>形式语法的符号用G表示，用语法G所生成的形式语言用L(G)表示。<br>他把形式语法G定义为四元组：</p>
-<pre><code>G = {Vn , Vt, S , P}
-</code></pre><p>其中：</p>
-<pre><code>Vn是非终止符号：不能处于生成状态的结点
-Vt是终止符号  ：  只能是出于生成状态的结点
-S：Vn的初始符号
-P：转换状态的规则集合：一般规则的形式为φ → ψ，
-</code></pre><h3 id="Chomsky的四类语法："><a href="#Chomsky的四类语法：" class="headerlink" title="Chomsky的四类语法："></a>Chomsky的四类语法：</h3><blockquote>
-<p>0型语法：规则为φ → ψ，要求φ不是空符号串。</p>
-<p>1型语法 <strong>上下文有关语法</strong>:对上下文有关并敏感，需要改变转换的前部分和后部分有特定的要求</p>
-<p>2型语法 <strong>上下文无关语法</strong>:与上下文无关，对某一个状态转移到下一个状态没有上下文的限制。上下文无关文法在自然语言的形势分析中就形成了“短语结构语法”。</p>
-<p>3型语法 <strong>有限状态语法</strong>：重写规则为A→aQ或A→a。其中，A和Q是非终极符号，a是终极符号，而A→a只不过是A→aQ这个重写规则中当Q为空符号时的一种特殊情况。如果把A和Q看成不同的状态，那么，由重写规则可知，由状态A转入状态Q时，可生成一个终极符号a，因此，这种语法叫做有限状态语法。有限状态语法又叫做3型语法。</p>
-<h3 id="相应语法的对应关系"><a href="#相应语法的对应关系" class="headerlink" title="相应语法的对应关系"></a>相应语法的对应关系</h3><pre><code>每一个有限状态语法的都是上下文无关的；
-每一个上下文无关语法都是上下文有关的；
-而每一个上下文有关语法都是0型的。
-</code></pre></blockquote>
-<p>Chomsky把由0型语法生成的语言叫0型语言，把由上下文有关语法、上下文无关语法、有限状态语法生成的语言分别叫做上下文有关语言、上下文无关语言、有限状态语言。有限状态语言包含于上下文无关语言之中，上下文无关语言包含于上下文有关语言之中，上下文有关语言包含于0型语言之中。这样就形成了语法的“Chomsky层级”（Chomsky hierarchy）。<br><img src="http://ondprveay.bkt.clouddn.com/layers.jpg" alt="Chomsky hierarchy"><br>在自然语言处理中,我们最感兴趣的是上下文无关语法和上下文无关语言,它们是短语结构语法理论的主要研究对象。</p>
-<h3 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h3><p>早在19世纪之初，德国杰出的语言学家和人文学者W. V. Humboldt(洪堡特，1767-1835)就观察到“语言是有限手段的无限运用”。W.V.Humboldt在《论人类语言结构的差异及其对人类精神发展的影响》（1836年单独印行）一书的第十二章“对语言方法的详细分析”中说，“语言面对着一个无限的、无边无际的领域，即一切可思维对象的总和，因此，语言必须无限地运用有限的手段，而思维力量和语言创造力量的同一性确保了语言能够做到这一点。” 但是，由于当时尚未找到揭示这种理解所包含的本质内容的技术工具和方法，W.V.Humboldt的论断还是不成熟的。</p>
-<h2 id="Chomsky的其他方面"><a href="#Chomsky的其他方面" class="headerlink" title="Chomsky的其他方面"></a>Chomsky的其他方面</h2><p>第一次看到Chomsky的名字并不是从编译原理课本上，而是寒假在b站上看的一部纪录片<a href="http://www.bilibili.com/video/av5622427" target="_blank" rel="external">美国梦之安魂曲</a>,他作为一名左翼批评家对美国的经济不平等和政治腐败等问题进行了思考，他在纪录片里把这些问题剖析的很透彻，精英文化的自建壁垒，教育资源的不均衡，金融寡头、垄断企业对美国党派的话语权，对语言学的研究让他对社会和世界的理解更加深刻。</p>
-
+        <h2 id="Chomsky"><a href="#Chomsky" class="headerlink" title="Chomsky"></a>Chomsky</h2><p><img src="http://ondprveay.bkt.clouddn.com/Chomsky.jpg" alt="chomsky"><br>
+        
+          <a class="article-more-a" href="/2017/03/29/Chomsky/#more">more >></a>
+        
       
 
       
@@ -540,11 +516,11 @@ P：转换状态的规则集合：一般规则的形式为φ → ψ，
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Mac Hexo yilia</a>
+                <a href="javascript:void(0)" class="js-tag color4">First  Hello world</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">First  Hello world</a>
+                <a href="javascript:void(0)" class="js-tag color5">Mac Hexo yilia</a>
               </li>
             
             <div class="clearfix"></div>
