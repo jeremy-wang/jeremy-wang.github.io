@@ -6,30 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://jeremywang.cn">
-  <title>Compiler | wang</title>
+  <title>Tag: chomsky 自然语言处理 上下文无关文法 编译原理 | wang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Super tiny compiler 概要标签（空格分隔）parser compiler lisp c
-
-编译器什么是编译器？
-
- *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Compiler">
-<meta property="og:url" content="http://jeremywang.cn/2017/03/28/Compiler/index.html">
+  <meta name="description" content="Jeremy wang&apos;s personal space|Tech|Thoughts">
+<meta property="og:type" content="website">
+<meta property="og:title" content="wang">
+<meta property="og:url" content="http://jeremywang.cn/tags/chomsky-自然语言处理-上下文无关文法-编译原理/index.html">
 <meta property="og:site_name" content="wang">
-<meta property="og:description" content="Super tiny compiler 概要标签（空格分隔）parser compiler lisp c
-
-编译器什么是编译器？
-
- *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。">
-<meta property="og:updated_time" content="2017-03-28T15:08:22.000Z">
+<meta property="og:description" content="Jeremy wang&apos;s personal space|Tech|Thoughts">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Compiler">
-<meta name="twitter:description" content="Super tiny compiler 概要标签（空格分隔）parser compiler lisp c
-
-编译器什么是编译器？
-
- *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。">
+<meta name="twitter:title" content="wang">
+<meta name="twitter:description" content="Jeremy wang&apos;s personal space|Tech|Thoughts">
   
     <link rel="alternative" href="/atom.xml" title="wang" type="application/atom+xml">
   
@@ -169,185 +156,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Compiler" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Compiler
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/03/29/Chomsky/" class="archive-article-date">
+  	<time datetime="2017-03-29T13:00:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-29</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/03/29/Chomsky/">Chomsky</a>
     </h1>
   
 
-        
-        <a href="/2017/03/28/Compiler/" class="archive-article-date">
-  	<time datetime="2017-03-28T15:04:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Super-tiny-compiler-概要"><a href="#Super-tiny-compiler-概要" class="headerlink" title="Super tiny compiler 概要"></a>Super tiny compiler 概要</h1><p>标签（空格分隔）parser compiler lisp c</p>
-<hr>
-<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><p>什么是编译器？</p>
-<blockquote>
-<p> *Unix操作系统的电脑，可以通过终端进行一些小程序的编译和运行，比如gcc（GNU c compiler)等，编译器的主要作用是将高级程序语言翻译为cpu能够理解并执行的机器语言（二进制)。</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="super-tiny-compiler"><a href="#super-tiny-compiler" class="headerlink" title="super tiny compiler"></a>super tiny compiler</h2><p>这个小型的编译器主要实现了从lisp的函数语法到c的函数的转变，而不是一般的操作系统中的编译器；将高级程序设计语言编译为机器语言。</p>
-<h2 id="构造编译器的程序的三个步骤"><a href="#构造编译器的程序的三个步骤" class="headerlink" title="构造编译器的程序的三个步骤"></a>构造编译器的程序的三个步骤</h2><blockquote>
-<p>解析： parser<br>转换：transform<br>代码生成：code generation</p>
-</blockquote>
-<h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>分为词法分析和语法分析</p>
-<blockquote>
-<p><strong>词法分析</strong><br>接收源代码，然后将源程序分割成Token的词片段，整个过程是在词法分析器tokenizer／lexer里完成的。<br>Token实际上是一个由一些代码语句组成的数组，可以是程序设计语言中允许出现的各种元素的集合。</p>
-<p><strong>语法分析</strong><br>接收之前的词法分析生成的Token，使他们转换为一种抽象的表达，描述代码语句和每个片段的关系，这种表达方式称为中间表示（intermediate representation）或者抽象语法树（Abstract Syntax Tree）AST。</p>
-</blockquote>
-<p>抽象语法树是一个嵌套关系很深的对象，使用了一种更加容易处理、便于理解程序的方式来代表代码本身。</p>
-<h2 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h2><p>在解析之后的下一步就是转换，他只是把AST做一些修改，它可以在同种语言下操作AST，也可以把AST翻译成全新的语言。</p>
-<blockquote>
-<ul>
-<li>转换AST的方法：<br>我们之前的AST中有很多相似的元素，这些元素都有type属性，他们被称为AST结点，这些结点含有多种属性，可以用于描述AST的部分信息。</li>
-</ul>
-</blockquote>
-<p>转换AST的时候结点是可以添加、移动和替代的，也是可以根据现有的AST生成一个全新的AST。</p>
-<p>  因为这个编译器的目标是把输入的代码转换为一种新的语言，所以我们会着重于产生一个针对新语言的全新AST。<br>  因此，为了能够处理所有的结点，我们需要采用深度优先的遍历方式。</p>
-<p>在此，如果没我们直接是在AST的内部操作，而不是产生一个新的AST，那么就需要在这里介绍所有的种类的抽象，但目前访问所有结点的方法以及足够。</p>
-<h2 id="代码生成"><a href="#代码生成" class="headerlink" title="代码生成"></a>代码生成</h2><p>编译器的最后一个阶段是代码生成，这个阶段所做的事情是会和转换重叠，但代码生成的最主要部分还是根据AST来输出代码。</p>
-<p>  代码的生成有多种工作方式，但编译器会重用之前生成的token，有些会创建独立的代码表示，以便于线性的输出代码，</p>
-<p>  所完成的代码生成器需要知道如何“打印”AST中所有类型的结点，然后他会递归的调用自身，知道所有代码都被打印到一个很长的字符串中。</p>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">chomsky 自然语言处理 上下文无关文法 编译原理</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的支持<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://jeremywang.cn/2017/03/28/Compiler/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/29/Chomsky/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Chomsky
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/03/24/Mac下使用hexo建立自己的博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac下使用hexo建立自己的博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -370,9 +232,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
